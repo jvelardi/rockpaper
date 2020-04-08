@@ -1,1 +1,1 @@
-Rock, Paper Scissors game using the developer console.
+Rock Paper Scissors game using the developer console.

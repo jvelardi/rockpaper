@@ -4,98 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
+    <header class="heading">
+        <h1>Rock, Paper Scissors</h1>
+    </header>
+    <div class="gamePrompt">
+    <h1>Please Choose Rock, Paper or Scissors</h1>
+    </div>
+<div class="container">
+    <div class="choose">
+        <h1 class="chooseH1">Rock</h1>
+        <img class="img" id="rock"  src="imgs/rock.png" alt="rock">
+    </div>
+    <div class="choose">
+        <h1 class="chooseH1">Paper</h1>
+        <img class="img" id="paper"  src="imgs/paper.jpg" alt="paper">
+    </div>
+    <div class="choose">
+        <h1 class="chooseH1">Scissors</h1>
+        <img class="img" id="scissors"  src="imgs/scissors.png" alt="scissors">
+    </div>
+</div>
 
-// Variables to get random values for computer opponent.
-        let computer = ["rock", "paper", "scissors"];
+<div class="score">
+    <h1>Score</h1>
+</div>
 
-        function computerInput() {
-            let empty = [];
-            empty += computer[Math.floor(Math.random() * 3)];
-            return empty;
-        }
+<div class="container">
+    <div class="points">
+        <h1 class="playerPoints">Player   0</h1>
+        <h1 class="computerPoints">Computer   0</h1>
+    </div>
+</div>
 
-// Variables to keep score.
-        let CPU = 0;
-        let Player = 0;
-
-//Console game.
-        function playRound(playerInput,computerInput) {
-                if (playerInput === "rock" && computerInput === "paper") {
-                    console.log("You lose! Paper beats rock.");
-                    CPU++;
-                    console.log("CPU " + CPU);
-                }
-                    else if (playerInput === "rock" && computerInput === "scissors") {
-                    console.log("You win! Rock beats scissors.");
-                    Player++;
-                    console.log("Player " + Player);
-                }
-                else if (playerInput === "rock" && computerInput === "rock") {
-                    console.log("It's a tie. Computer chose Rock.");
-                }
-                else if (playerInput === "paper" && computerInput === "scissors") {
-                    console.log("You lose! Scissors beats paper.");
-                    CPU++;
-                    console.log("CPU " + CPU);
-                }
-                else if (playerInput === "paper" && computerInput === "rock") {
-                    console.log("You Win! Paper beats rock.");
-                    Player++;
-                    console.log("Player " + Player);
-                }
-                else if (playerInput === "paper" && computerInput === "paper") {
-                    console.log("It's a tie. Computer chose Paper.");
-                }
-                else if (playerInput === "scissors" && computerInput === "rock") {
-                    console.log("You lose! Rock beats scissors.");
-                    CPU++;
-                    console.log("CPU " +CPU);
-                }
-                else if (playerInput === "scissors" && computerInput === "paper") {
-                    console.log("You win! Scissors beats paper.");
-                    Player++;
-                    console.log("Player " + Player);
-                }
-                else if (playerInput === "scissors" && computerInput === "scissors") {
-                    console.log("It's a tie. Computer chose Scissors.");
-                }
-            }
-
-        function game() {
-// Loop used to trigger the playerInput prompt nummerous times to trigger multiple console games.
-            for(let i = 0; i <5; i++) {
-// Prompt used to ask for an input from the player.
-                let playerInput = prompt("Choose Rock, Paper, or Scissors").toLowerCase();
-                
-// Conditional statement used to only allow the console game to activate if playerInput has these values.
-                if ((playerInput === "rock") || (playerInput === "paper") || (playerInput === "scissors")) {
-                playRound(playerInput,computerInput());
-            } else {
-                alert("Please choose Rock, Paper or Scissors.");
-// Cancels out the loop to make sure that the alert doesn't count towards the 5 game total.
-                i--;
-            }
-            }
-//End of loop.
-
-//End game message and points total.
-            if (Player > CPU) {
-                console.log("Congrats. You Win");
-            } else if (CPU > Player) {
-                console.log("Sorry! You Lose");
-            }
-            else {
-                console.log("You tied the computer");
-            }
-
-            console.log("Computer = " + CPU + " Player = " + Player);
-            }
-// Event listener to the start game.
-        window.addEventListener('load', game);
-    </script>
-    
+<script src="script.js"></script>    
 </body>
 </html>

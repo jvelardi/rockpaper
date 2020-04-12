@@ -1,0 +1,61 @@
+*, html {
+    margin: 0;
+}
+
+.heading {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-size: 35px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.gamePrompt {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-family: 'Bree Serif', serif;
+    font-size: 25px;
+}
+
+
+.img {
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.choose {
+    display: inline-block;
+}
+
+.chooseH1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Bree Serif', serif;
+    font-size: 35px;
+}
+
+.score {
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.points h1 {
+    margin: 0 30px;
+    display: inline-block;
+}
+
+
+
+
+
+

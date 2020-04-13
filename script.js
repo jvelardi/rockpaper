@@ -92,13 +92,15 @@ function gameOverMessage() {
 //This function removes Rock, Paper and Scissors from the DOM once all 5 rounds have been played.
 function gameOver() {
     if (Games >= 5) {
-        container.removeChild(choose[0]);
-        container.removeChild(choose[1]);
-        container.removeChild(choose[2]);
+        for (let i = 0; i < choose.length; i++) {
+            container.removeChild(choose[i]);
+        }
 
         gameOverMessage();
 }
 }
+
+
 
 //Onclick commands to start game.
 scissors.addEventListener('click', function () {
